@@ -1,0 +1,29 @@
+<table class="table table-hover">
+  <th>Id</th>
+  <th>FirstName</th>
+  <th>LastName</th>
+  <th>BirthDate</th>
+  <th>Designation</th>
+  <th>Address</th>
+  <tr *ngFor="let itm of allItem; let id=index">
+    <!-- {{id+1}} -->
+     <td>{{itm.id}}</td>
+    <td>{{itm.firstname}}</td>
+    <td>{{itm.lastname}}</td>
+    <td>{{itm.birthdate}}</td>
+    <td>{{itm.designation}}</td>
+    <td>{{itm.address}}</td>
+    <td>
+      <button (click)="editItem(itm)" class="btn btn-info"> Edit</button>
+      <!-- <a class="btn" (click)="edit(itm)">
+        <i class="fa fa-edit"></i>
+      </a> -->
+    </td>
+    <td>
+      <button (click)="deleteItem(itm.id)" class="btn btn-info"> Delete</button>
+      <!-- <a class="btn text-danger" (click)="deleteItem(itm.id)">
+        <i class="fa fa-trash"></i>
+      </a> -->
+    </td>
+  </tr>
+</table>

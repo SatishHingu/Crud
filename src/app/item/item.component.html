@@ -1,0 +1,192 @@
+<!-- <form [formGroup]="bioSection" (ngSubmit)="callingFunction()"> -->
+  <!-- <h3> Employee Form</h3>
+<form>
+    <label>
+      Id:
+      <input type="text" formControlName="id" style="margin-right: 5px;">
+    </label>
+  <label>
+      Name:
+      <input type="text" formControlName="name" style="margin-right: 5px;">
+    </label>
+  <label>
+      Birth Date:
+      <input type="text" formControlName="birthDate" style="margin-right: 5px;">
+    </label>
+
+    <label>
+      Designation:
+      <input type="text" formControlName="designation">
+    </label><br><br>
+  <button type="submit" value="Register">Submit Data</button>
+  </form> -->
+
+<!-- <div class="cantainer">
+  <div>Employee Form</div>
+  <div class="employee-item">
+    <form #myform ="ngForm" (ngSubmit)="employee(myform)" class="form form-employee")>
+      <div class="form-field">
+        <label class="employee" for="employee-id">EmpId</label>
+        <input name="Id" type="number" class="form-input" ngModel required>
+      </div>
+    <div class="form-field">
+      <label class="employee" for="employee-name">EmpName</label>
+      <input name="Name" type="text" class="form-input" ngModel required>
+    </div>
+    <div class="form-field">
+        <label class="employee" for="employee-birthDate">EmpBirthDate</label>
+        <input name="BirthDate" type="text" class="form-input" ngModel required>
+      </div>
+      <div class="form-field">
+          <label class="employee" for="employee-desigation">EmpDesignation</label>
+          <input name="Designation" type="text" class="form-input" ngModel required>
+        </div>
+        <div class="form-field">
+          <input type="submit" value="register">
+        </div>
+  </form>
+  </div>
+
+</div> -->
+<!-- <div class="Register">
+<h1> Employee Form </h1>
+
+<form #employeeform = "ngForm" (ngSubmit) = "onSubmit(employeeform)">
+  <form [formGroup]="employeeform" novalidate class="form">
+  <input type = "text" name = "id" placeholder = "Employee Id" name="Id" class="form-control" ngModel style="max-width: 500px;">
+
+  <input type = "text" name = "fullName" placeholder = "Employee Full Name" name="fullName" class="form-control" ngModel style="max-width: 500px;">
+
+  <input type = "date" name = "birthDate" placeholder = "Employee birth Date" name="birthDate" class="form-control" ngModel style="max-width: 500px;">
+
+  <input type = "text" name = "designation" placeholder = "Employee Designation" name="designation" class="form-control" ngModel style="max-width: 500px;">
+
+  <textarea name = "message" placeholder = "Your Message" name="Message" class="form-control" ngModel style="max-width: 500px; margin-top: 5px;"></textarea>
+  <br/>
+    <input type = "submit" value = "Register" class="form-control" ngModel style="max-width: 100px; background-color: #b3cbdd; color: black;">
+    <button class="btn btn-success" [disabled]='employeeform.invalid' *ngIf="btnvisibility" (click)="onSubmit()">Register</button>
+    <button class="btn btn-success" [disabled]='employeeform.invalid' *ngIf="!btnvisibility" (click)="onUpdate()">Update</button>
+
+  <p>Employee Detail : <br/> {{ employeeform.value | json }}</p>
+</form>
+</div> -->
+<!-- <div class="col-md-12">
+  <h2> Employee Details</h2>
+  <div class="table-responsive table-container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Employee Id</th>
+          <th>Employee Full Name</th>
+          <th>Employee Birth Date</th>
+          <th>Employee Designation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of item">
+          <td class="hidden">{{item.id}</td>
+          <td>{{item.fullName}}</td>
+          <td>{{item.birthdate}}</td>
+          <td>{{item.designation}}</td>
+          <td> -->
+            <!-- <button (click)="deleteEmp(emp)" class="btn btn-info"> Delete</button> -->
+            <!-- <button (click)="editEmp(items)" style="margin-left: 20px;" class="btn btn-info"> Edit</button> -->
+          <!-- </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div> -->
+<!-- <div class="col-md-6">
+  <h2 class="text-center">Employee Form</h2>
+  <form #employeeform = "ngForm" (ngSubmit) = "onSubmit(employeeform)"> -->
+  <!-- <form [formGroup]="employeeform" novalidate class="form"> -->
+    <!-- <div class="form-group">
+      <input type="number" formControlName="id" placeholder="Id" name="Id" class="form-control" ngModel>
+      <input type="text" formControlName="fullName" placeholder="Employee Name" name="fullName" class="form-control" ngModel>
+      <input type="date" formControlName="birthDate" placeholder="Employee Birth Date" name="birthDate" class="form-control" ngModel>
+      <input type="text" formControlName="designation" placeholder="Employee designation" name="designation" class="form-control" ngModel>
+    </div>
+    <input type = "submit" value = "Register"> -->
+    <!-- <button class="btn btn-success" [disabled]='employeeform.invalid' *ngIf="btnvisibility" (click)="onSubmit()">Save</button>
+    <button class="btn btn-success" [disabled]='employeeform.invalid' *ngIf="!btnvisibility" (click)="onUpdate()">Update</button> -->
+
+    <!-- <p>Form value: {{ employeeform.value | json }}</p>
+  </form>
+</div> -->
+
+<h3>Employee Detail</h3>
+<form [formGroup]="addForm" novalidate class="form">
+  <!-- <div class="row">
+    <div class="col-md-6 form-group">
+      <input type="number" formControlName="id" placeholder="Id" class="form-control" ngModel>
+    </div>
+  </div> -->
+
+<div class="row">
+  <div class="col-md-6 form-group">
+    <input type="text" formControlName="firstname" placeholder="First Name" class="form-control" [(ngModel)]="itemService.currentItem.firstname">
+  </div>
+</div>
+  <div class="row">
+  <div class="col-md-6 form-group">
+    <input type="text" formControlName="lastname" placeholder="last Name" class="form-control" [(ngModel)]="itemService.currentItem.lastname">
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6 form-group">
+    <input type="date" formControlName="birthdate" placeholder="Birth Date" class="form-control" [(ngModel)]="itemService.currentItem.birthdate">
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6 form-group">
+    <input type="text" formControlName="designation" placeholder="Designation" class="form-control" [(ngModel)]="itemService.currentItem.designation">
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6 form-group">
+    <input type="text" formControlName="address" placeholder="Address" class="form-control" [(ngModel)]="itemService.currentItem.address">
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <button class="btn btn-success btn-block btn-lg " (click)="onSubmit(itemService.currentItem,true)"><i class="fa fa-save"></i> Save</button>
+  </div>
+</div>
+</form>
+  <div class="row">
+    <div class="col-md-6">
+      <table class="table table-hover">
+        <th>Id</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>BirthDate</th>
+        <th>Designation</th>
+        <th>Address</th>
+        <tr *ngFor="let itm of allItem; let id=index">
+          <!-- {{id+1}} -->
+           <td>{{itm.id}}</td>
+          <td>{{itm.firstname}}</td>
+          <td>{{itm.lastname}}</td>
+          <td>{{itm.birthdate}}</td>
+          <td>{{itm.designation}}</td>
+          <td>{{itm.address}}</td>
+          <td>
+            <button (click)="editItem(itm)" class="btn btn-info"> Edit</button>
+            <!-- <a class="btn" (click)="edit(itm)">
+              <i class="fa fa-edit"></i>
+            </a> -->
+          </td>
+          <td>
+            <button (click)="deleteItem(itm.id)" class="btn btn-info"> Delete</button>
+            <!-- <a class="btn text-danger" (click)="deleteItem(itm.id)">
+              <i class="fa fa-trash"></i>
+            </a> -->
+          </td>
+        </tr>
+      </table>
+    </div>
+</div>
+
+

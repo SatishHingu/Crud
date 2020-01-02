@@ -1,0 +1,30 @@
+<!-- <div>
+    <button routerLink="/" class="btn btn-light">Go back</button>
+  <h3>Post {{postId}}</h3>
+  <div class="row">
+    <div class="col-md-3 email" *ngFor="let Api of comments | async">
+    </div>
+  </div>
+</div> -->
+
+<!-- <div>
+    <button routerLink="/" class="btn btn-light">Go back</button>
+    <h3>Comments Detail</h3>
+  <div class="row">
+    <div class="col-sm-3" *ngFor="let Api of comments | async">
+      <div class="card">
+        <div class="card-body">
+          <a routerLink="comments/{{postId}}">{{Api.title}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div> -->
+
+  <div>
+      <button routerLink="/home" class="btn btn-light" style="background-color: #007bff;">Go back</button>
+      <h3 *ngIf="apiData.title">{{apiData.title}}</h3>
+      <div class="row">
+      </div>
+    </div>
+
