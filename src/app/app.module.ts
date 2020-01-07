@@ -31,7 +31,7 @@ import { MapsComponent } from './maps/maps.component';
     ApiComponent,
     ItemComponent,
     ItemListComponent,
-    MapsComponent
+    MapsComponent,
          ],
   entryComponents: [],
   imports: [
@@ -41,7 +41,8 @@ import { MapsComponent } from './maps/maps.component';
     FormsModule,
     ReactiveFormsModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDqS8eB1QiUt1COOWlbLckxNO8RVtsYknQ'
+      apiKey: 'AIzaSyByEVYYPDf-txvYUwpLItSsi7Ig2KC4GvU',
+      libraries: ['places']
     })
   ],
   providers: [],
