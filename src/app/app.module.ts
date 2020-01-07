@@ -15,6 +15,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { ItemComponent } from './item/item.component';
 import {  FormsModule,  ReactiveFormsModule  } from '@angular/forms';
 import { ItemListComponent } from './item-list/item-list.component';
+import { AgmCoreModule } from '@agm/core';
+import { MapsComponent } from './maps/maps.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import { ItemListComponent } from './item-list/item-list.component';
     ApiComponent,
     ItemComponent,
     ItemListComponent,
+    MapsComponent
          ],
   entryComponents: [],
   imports: [
@@ -36,7 +39,10 @@ import { ItemListComponent } from './item-list/item-list.component';
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDqS8eB1QiUt1COOWlbLckxNO8RVtsYknQ'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
